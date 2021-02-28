@@ -1,1 +1,1 @@
-docker run -itd -v /root/csvserver/solution:/csvserver:Z -p 9393:9300 -e CSVSERVER_BORDER=Orange infracloudio/csvserver:latest bash 
+docker run -itd -v /root/csvserver/solution/indexFile:/csvserver/inputdata:Z -p 9393:9300 -e CSVSERVER_BORDER=Orange infracloudio/csvserver:latest bash 
