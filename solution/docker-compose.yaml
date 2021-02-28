@@ -1,0 +1,11 @@
+version: '3'
+services:
+  csvserver:
+    image: infracloudio/csvserver:latest
+    privileged: true
+    user: root
+    ports:
+      - 9300:9300
+    container_name: csvserver
+    volumes:
+      - /root/csvserver/solution/inputFile:/csvserver/inputdata
