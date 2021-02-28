@@ -1,3 +1,5 @@
+#docker compose for csvserver image
+
 version: '3'
 services:
   csvserver:
@@ -9,3 +11,16 @@ services:
     container_name: csvserver
     volumes:
       - /root/csvserver/solution/inputFile:/csvserver/inputdata
+
+
+#docker compose for promethus 
+
+version: '3'
+services:
+  promethus:
+    image: prom/prometheus:v2.22.0
+    privileged: true
+    user: root
+    ports:
+      - 9090:9090
+    container_name: promethus
